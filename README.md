@@ -15,11 +15,15 @@ you find one there that matches your OS, you can skip to "Using"
 
 ## Building
 
-You can use the Xcode project here or the "build_analyzer.py" script. Both are
+You can use the Xcode project here or the `build_analyzer.py` script. Both are
 tested on MacOS Catalina. Linux might work with the script.
 
+There is also a Makefile that has been tested on 64-bit Debian Linux,
+and can easily be customized for other systems. Type `make` to build
+with it.
+
 Note that the build depends on you having the Saleae supplied AnalyzerSDK
-installed at the same directoy level as this code. This is a bit different
+installed at the same directory level as this code. This is a bit different
 than how Saleae lays out their sample.
 
 ## Using
@@ -44,4 +48,3 @@ The Simulation data generation doesn't work quite right because there is only on
 asked for by Logic and SD needs at least cmd and clk, so the results are a bit garbage
 
 There is no support for HS mode (data on rising clock or both clock edges)
-
