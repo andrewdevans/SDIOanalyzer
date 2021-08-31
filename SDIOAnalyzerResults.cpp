@@ -38,7 +38,7 @@ SDIOAnalyzerResults::~SDIOAnalyzerResults()
 {
 }
 
-void SDIOAnalyzerResults::GenerateBubbleText( U64 frame_index, Channel& channel, DisplayBase display_base )
+void SDIOAnalyzerResults::GenerateBubbleText( U64 frame_index, Channel& /*channel*/, DisplayBase display_base )
 {
 	ClearResultStrings();
 	Frame frame = GetFrame( frame_index );
@@ -120,7 +120,7 @@ void SDIOAnalyzerResults::GenerateBubbleText( U64 frame_index, Channel& channel,
     }
 }
 
-void SDIOAnalyzerResults::GenerateExportFile( const char* file, DisplayBase display_base, U32 export_type_user_id )
+void SDIOAnalyzerResults::GenerateExportFile( const char* file, DisplayBase display_base, U32 /*export_type_user_id*/ )
 {
 	std::ofstream file_stream( file, std::ios::out );
 
@@ -200,7 +200,7 @@ void SDIOAnalyzerResults::GenerateExportFile( const char* file, DisplayBase disp
 	file_stream.close();
 }
 
-void SDIOAnalyzerResults::GenerateFrameTabularText( U64 frame_index, DisplayBase display_base )
+void SDIOAnalyzerResults::GenerateFrameTabularText( U64 /*frame_index*/, DisplayBase /*display_base*/ )
 {
 	// Frame frame = GetFrame( frame_index );
 	// ClearResultStrings();
@@ -210,15 +210,14 @@ void SDIOAnalyzerResults::GenerateFrameTabularText( U64 frame_index, DisplayBase
 	// AddResultString( number_str );
 }
 
-void SDIOAnalyzerResults::GeneratePacketTabularText( U64 packet_id, DisplayBase display_base )
+void SDIOAnalyzerResults::GeneratePacketTabularText( U64 /*packet_id*/, DisplayBase /*display_base*/ )
 {
 	ClearResultStrings();
 	AddResultString( "not supported" );
 }
 
-void SDIOAnalyzerResults::GenerateTransactionTabularText( U64 transaction_id, DisplayBase display_base )
+void SDIOAnalyzerResults::GenerateTransactionTabularText( U64 /*transaction_id*/, DisplayBase /*display_base*/ )
 {
 	ClearResultStrings();
 	AddResultString( "not supported" );
 }
-

@@ -9,7 +9,7 @@ ANALYZER_SDK_INCLUDE := $(ANALYZER_SDK)/include
 ANALYZER_SDK_LIB := $(ANALYZER_SDK)/lib
 
 CPPFLAGS = -I$(ANALYZER_SDK_INCLUDE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.d
-CXXFLAGS := -fPIC -W -Wall -Werror -Wno-unused
+CXXFLAGS := -fPIC -W -Wall -Werror
 LDFLAGS := -shared
 LDLIBS := $(ANALYZER_SDK_LIB)/Analyzer64.lib
 
