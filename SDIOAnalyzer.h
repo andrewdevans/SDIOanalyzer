@@ -23,6 +23,8 @@
 #ifndef SDIO_ANALYZER_H
 #define SDIO_ANALYZER_H
 
+#include <memory>
+
 #include <Analyzer.h>
 #include "SDIOAnalyzerResults.h"
 #include "SDIOSimulationDataGenerator.h"
@@ -46,8 +48,8 @@ public:
     enum responseTypes {R1, R2, R3, R4, R7};
 
 protected: //vars
-	std::auto_ptr< SDIOAnalyzerSettings > mSettings;
-	std::auto_ptr< SDIOAnalyzerResults > mResults;
+	std::unique_ptr< SDIOAnalyzerSettings > mSettings;
+	std::unique_ptr< SDIOAnalyzerResults > mResults;
 
 	AnalyzerChannelData* mClock;
 	AnalyzerChannelData* mCmd;

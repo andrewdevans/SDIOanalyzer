@@ -23,6 +23,8 @@
 #ifndef SDIO_ANALYZER_SETTINGS
 #define SDIO_ANALYZER_SETTINGS
 
+#include <memory>
+
 #include <AnalyzerSettings.h>
 #include <AnalyzerTypes.h>
 
@@ -47,13 +49,13 @@ public:
 	Channel mInputChannel;
 
 protected:
-	std::auto_ptr< AnalyzerSettingInterfaceBool >	mIs4bitInterface;
-	std::auto_ptr< AnalyzerSettingInterfaceChannel >	mClockChannelInterface;
-	std::auto_ptr< AnalyzerSettingInterfaceChannel >	mCmdChannelInterface;
-	std::auto_ptr< AnalyzerSettingInterfaceChannel >	mDAT0ChannelInterface;
-	std::auto_ptr< AnalyzerSettingInterfaceChannel >	mDAT1ChannelInterface;
-	std::auto_ptr< AnalyzerSettingInterfaceChannel >	mDAT2ChannelInterface;
-	std::auto_ptr< AnalyzerSettingInterfaceChannel >	mDAT3ChannelInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceBool >	mIs4bitInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceChannel >	mClockChannelInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceChannel >	mCmdChannelInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceChannel >	mDAT0ChannelInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceChannel >	mDAT1ChannelInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceChannel >	mDAT2ChannelInterface;
+	std::unique_ptr< AnalyzerSettingInterfaceChannel >	mDAT3ChannelInterface;
 };
 
 #endif //SDIO_ANALYZER_SETTINGS
